@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa</title>
+    <style>
+        body {
+            background-color: rgb(26, 151, 160);
+            color: white;
+            font: normal 20pt Arial;
+        }
+        h1 {
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, mundo!</h1>
+    <p>Estou aprendendo JavaScript!</p>
+
+    <script>
+        var n1 = Number(window.prompt('Digite um número:'))
+        var n2 = Number(window.prompt('Digite outro número:'))
+        // Convertendo valores para tipo numérico:
+        // Number.parseInt()
+        // Number.parseFloat()
+        // Number()
+
+        //Convertendo valores para tipo String:
+        // variavel.toString
+        // String(variavel) 
+        
+        var soma = n1 + n2
+        window.alert(`A soma entre ${n1} e ${n2} é igual a ${soma}.`)
+        // (number + number) para adição
+        // (string + string) para concatenação
+
+        // Métodos para formatação de String:
+        // variavel.length // quantos caracteres a string tem
+        // s.toUpperCase() // tudo para 'MAIÚSCULAS'
+        // s.toLowerCase() // tudo para 'minúsculas'
+    </script>
+</body>
+</html>
