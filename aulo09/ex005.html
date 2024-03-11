@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passos com DOM</title>
+    <style>
+        body {
+            background-color: rgb(37, 93, 167);
+            color: white;
+            font: normal 17pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em JavaScript.</p>
+    <div id="msg_id" class="msg_class" name="msg_name">Clique em mim</div>
+
+    <script>
+        // SELECIONANDO POR (   SELETOR   )
+        var txt = window.document.querySelector('div#msg_id')
+        var txt = window.document.querySelector('div.msg_class')
+
+        txt.style.background = 'red'
+        txt.style.color = 'yellow'
+        
+        
+
+        // SELECIONANDO POR (   MARCA   )
+        // window.document.write('Está escrito assim: ' + p1.innerText)
+        
+        // var p1 = window.document.getElementsByTagName('p')[1]
+        // p1.style.color = 'red'
+        
+        // var corpo = window.document.body
+        // corpo.style.background = 'black'
+
+        // document.write(p1.innerHTML) | Imprime o Texto de maneira fiel, mesmo que haja TAGS dentro (<STRONG> etc.).
+        // document.write(p1.innerText) | Imprime o Texto dentro da TAG, transcrevendo possíveis TAGS dentro.
+
+
+
+        // SELECIONANDO POR (   ID   )
+        // var mensagem = window.document.getElementById('msg_id')
+        // mensagem.style.background = 'Green'
+        // mensagem.innerText = 'Estou aguardando'
+
+        // window.document.getElementById('msg_id').innerText = 'Olá!'
+
+
+
+        // SELECIONANDO POR (   NAMES   )
+        // var texto = window.document.getElementsByName('msg_name')[0]
+        // texto.innerText = 'Olá!'
+
+
+
+        // SELECIONANDO POR (   CLASSES   )
+        // var texto = window.document.getElementsByClassName('msg_class')[0]
+        // texto.innerText = 'Olá!'
+    </script>
+</body>
+</html>
