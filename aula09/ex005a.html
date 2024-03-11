@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body {
+            font: normal 17pt Sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bem-vindo ao Sistema!</h1>
+    <p id="welcome">
+        <!--Hello, World!-->
+    </p>
+    <p class="mai">O seu nome em MAIÚSCULAS é: </p>
+    <p class="min">O seu nome em minúsculas é: </p>
+
+    <script>
+        var nome = window.prompt('Qual é o seu nome?')
+        var welcome = window.document.querySelector('p#welcome')
+        welcome.innerText = `Seja bem-vindo(a), ${nome}!`
+
+        var maius = window.document.getElementsByTagName('p')[1]
+        var minus = window.document.getElementsByTagName('p')[2]
+
+        maius.innerText = `o seu nome em MAIÚSCULAS é: ${nome.toUpperCase()}`
+        minus.innerText = `O seu nome em minúsculas é: ${nome.toLowerCase()}`
+
+    </script>
+</body>
+
+</html>
