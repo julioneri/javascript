@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+<body>
+    <section id="containers">
+
+        <div id="superbox-container">
+            <p id="superbox" class="boxstyle">SUPERBOX</p>
+        </div>
+        
+        <div id="box-container">
+            <p style="background-color: #f94144;" class="box boxstyle">COLOR</p>
+            <p style="background-color: #f9c74f;" class="box boxstyle">COLOR</p>
+            <p style="background-color: #43aa8b;" class="box boxstyle">COLOR</p>
+            <p style="background-color: #277da1;" class="box boxstyle">COLOR</p>
+        </div>
+
+    </section>
+
+    <script>
+        var superbox = window.document.querySelector('p#superbox')
+
+        var color_00 = window.document.getElementsByClassName('box')[0]
+        var color_01 = window.document.getElementsByClassName('box')[1]
+        var color_02 = window.document.getElementsByClassName('box')[2]
+        var color_03 = window.document.getElementsByClassName('box')[3]
+
+        color_00.addEventListener('click', color00)
+        function color00() {
+            superbox.style.background = '#f94144'
+        }
+
+        color_01.addEventListener('click', color01)
+        function color01() {
+            superbox.style.background = '#f9c74f'
+        }
+
+        color_02.addEventListener('click', color02)
+        function color02() {
+            superbox.style.background = '#43aa8b'
+        }
+
+        color_03.addEventListener('click', color03)
+        function color03() {
+            superbox.style.background = '#277da1'
+            
+        }
+
+        
+    </script>
+</body>
+</html>
