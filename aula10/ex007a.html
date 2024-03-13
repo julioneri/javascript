@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somar</title>
+    <link rel="stylesheet" href="estilos/styleb.css">
+</head>
+<body>
+    <section>
+        <div id="somador">
+            <p id="resultado">Resultado</p>
+            <input type="number" name="txtnum" id="txtn1" placeholder="0">
+            <input type="number" name="txtnum" id="txtn2" placeholder="0">
+            <input type="button" value="Somar" id="somar" onclick="somar()">
+        </div>
+    </section>
+    <script>
+        function somar() {
+            var num1 = window.document.getElementById('txtn1')
+            var num2 = window.document.getElementById('txtn2')
+
+            var n1 = Number(num1.value)
+            var n2 = Number(num2.value)
+
+            var s = n1 + n2
+
+            var res = window.document.getElementById('resultado')
+            res.innerHTML = s
+        }
+    </script>
+</body>
+</html>
