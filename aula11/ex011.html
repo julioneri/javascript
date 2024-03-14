@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <label for="txtna">Digite seu País: </label>
+    <input type="text" name="txtna" id="txtna" placeholder="Ex: Brasil">
+    <input type="button" value="Conferir" onclick="conferir()">
+    <div id="res">
+
+    </div>
+
+    <script>
+        function conferir() {
+            var pais = window.document.querySelector('input#txtna')
+            var resul = window.document.querySelector('div#res')
+            var nacio = (pais.value).toUpperCase()
+
+            resul.innerHTML = `<p>Você nasceu em <strong>${nacio}</strong>.</p>`
+            if (nacio == 'BRASIL') {
+                resul.innerHTML += `<p>Você é Brasileiro(a)!</p>`
+            } else {
+                resul.innerHTML += `<p>Você não é Brasileiro(a)!</p>`
+            }
+        }
+    </script>
+</body>
+</html>
