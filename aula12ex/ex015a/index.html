@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+</head>
+<body>
+    <input type="text" name="todo" id="todo" placeholder="O que faremos?" autocomplete="off">
+    <input type="button" value="Inserir" onclick="adicionar()">
+    <input type="button" value="Limpar" onclick="remover()">
+    <div>
+        <ul id="todolist">
+            <!-- Área de Itens -->
+        </ul>
+    </div>
+
+    <script>
+        function adicionar() {
+            var itemList = window.document.querySelector('input#todo')
+            var listArea = window.document.querySelector('ul#todolist')
+
+            var listElement = window.document.createElement('li')
+
+            var labelElement = window.document.createElement('label')
+
+            var checkbox = window.document.createElement('input')
+            checkbox.type = 'checkbox' // Poderia alernativamente utilizar 'checkbox.setAttribute('type', 'checkbox')'
+            checkbox.name = 'check'
+            checkbox.id = 'check' + (listArea.children.length+1)
+
+            var deleteBtn = window.document.createElement('button')
+            deleteBtn.textContent = 'Deletar'
+
+            if (itemList.value != "") {
+                listElement.appendChild(checkbox)
+
+                labelElement.textContent = todo.value
+                labelElement.htmlFor = checkbox.id
+                listElement.appendChild(labelElement)
+
+                listElement.appendChild(deleteBtn)
+
+                listArea.appendChild(listElement)
+                itemList.value = ""
+            }
+
+            deleteBtn.addEventListener('click', deletarItem)
+
+            function deletarItem() {
+                listElement.remove()
+            }
+        }
+
+        function remover() {
+            var listArea = window.document.querySelector('ul#todolist')
+            listArea.innerHTML = ""
+        }
+    </script>
+</body>
+</html>
