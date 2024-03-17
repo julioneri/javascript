@@ -55,6 +55,16 @@
                     cleanBtn.style.display = 'none'
                 }
             }
+
+            checkbox.addEventListener('click', marcado)
+            function marcado() {
+                if (labelElement.style.textDecoration != 'line-through') {
+                    labelElement.style.textDecoration = 'line-through'
+                } else {
+                    labelElement.style.textDecoration = 'none'
+                }
+                
+            }
         }
 
         function remover() {
