@@ -8,7 +8,7 @@
 <body>
     <input type="text" name="todo" id="todo" placeholder="O que faremos?" autocomplete="off">
     <input type="button" value="Inserir" onclick="adicionar()">
-    <input type="button" value="Limpar" onclick="remover()">
+    <input type="button" value="Limpar" id="cleanBtn" style="display: none;" onclick="remover()">
     <div>
         <ul id="todolist">
             <!-- Área de Itens -->
@@ -19,6 +19,7 @@
         function adicionar() {
             var itemList = window.document.querySelector('input#todo')
             var listArea = window.document.querySelector('ul#todolist')
+            var cleanBtn = window.document.querySelector('input#cleanBtn')
 
             var listElement = window.document.createElement('li')
 
@@ -43,19 +44,31 @@
 
                 listArea.appendChild(listElement)
                 itemList.value = ""
+                cleanBtn.style.display = 'inline-block'
             }
 
             deleteBtn.addEventListener('click', deletarItem)
 
             function deletarItem() {
                 listElement.remove()
+                if (listArea.children.length == 0) {
+                    cleanBtn.style.display = 'none'
+                }
             }
         }
 
         function remover() {
             var listArea = window.document.querySelector('ul#todolist')
             listArea.innerHTML = ""
+
+            var cleanBtn = window.document.querySelector('input#cleanBtn')
+            cleanBtn.style.display = 'none'
         }
+        
+         //function remoBtn() {
+        //     var cleanBtn = window.document.querySelector('input#cleanBtn')
+        //     cleanBtn.style.display = 'none'
+        // }
     </script>
 </body>
 </html>
