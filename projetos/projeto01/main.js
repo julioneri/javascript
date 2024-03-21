@@ -7,6 +7,11 @@
 // A multa vai custar
 // R$7.00 por cada Km acima do limite.
 
+function closeModal() {
+    var resulModal = window.document.querySelector('div#resulmodal')
+    resulModal.style.display = 'none'
+}
+
 function calcular() {
     var velocidade = window.document.querySelector
     ('input#vel')

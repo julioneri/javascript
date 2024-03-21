@@ -22,8 +22,16 @@
         <input class="button" type="button" value="Enviar">
     </div>
     <div id="resulmodal" class="container-style">
+        <button class="closebtn" onclick="closeModal()">x</button>
         <span class="material-symbols-outlined">warning</span>
         <p>Mensagem</p>
     </div>
+
+    <script>
+        function closeModal() {
+            var resulModal = window.document.querySelector('div#resulmodal')
+            resulModal.style.display = 'none'
+        }
+    </script>
 </body>
 </html>

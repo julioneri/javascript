@@ -10,21 +10,23 @@
 </head>
 <body>
     <div id="container" class="container-style">
-        <h1>Projeto 01</h1>
+        <h1>Projeto 02</h1>
         <hr>
         <div id="subtArea">
-            <p>Monitoramento de Velocidade</p>
-            <p>Digite a velocidade do veículo.</p>
+            <p>Verificador de Triângulos</p>
+            <p>Insira os comprimentos das três retas.</p>
         </div>
         <div id="input-container">
-            <input type="number" name="vel" id="vel" placeholder="Ex: 50"><span>Km/h</span>
+            <input type="number" name="reta" id="reta1" placeholder="Comprimento da Reta 1*">
+            <input type="number" name="vel" id="reta2" placeholder="Comprimento da reta 2*">
+            <input type="number" name="vel" id="reta3" placeholder="Comprimento da reta 3*">
         </div>
         <input class="button" type="button" value="Enviar" onclick="calcular()">
     </div>
     <div id="resulmodal" class="container-style">
         <button class="closebtn" onclick="closeModal()">x</button>
         <span class="material-symbols-outlined" id="iconResul">warning</span>
-        <p id="resul"></p>
+        <p id="resul">Mensagem</p>
     </div>
 
     <script src="main.js"></script>
