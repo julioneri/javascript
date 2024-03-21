@@ -31,7 +31,7 @@ body {
 }
 
 #resulmodal {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     flex-direction: row;
@@ -50,8 +50,9 @@ body {
 
 #resulmodal > p{
     /* width: 80%; */
-    text-align: justify;
+    text-align: start;
     padding: 0 10px;
+    word-spacing: 10px;
 }
 
 #container h1 {
