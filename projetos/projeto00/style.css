@@ -126,7 +126,7 @@ input[type=number]::-webkit-outer-spin-button {
 /* ESTILOS DO MODAL */
 
 #resulmodal {
-    display: none;
+    display: none; /* Flex */
     align-items: center;
     justify-content: center;
     flex-direction: row;
@@ -169,4 +169,28 @@ input[type=number]::-webkit-outer-spin-button {
 
 .container-style .closebtn:hover {
     color: #5d6179;
+}
+
+/* FOOTER */
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.150);
+    width: 100%;
+    height: 50px;
+}
+
+footer > div#social-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    gap: 15px;
+}
+
+footer > div#social-media > a > i{
+    color: white;
+    font-size: 1.7em;
 }
