@@ -4,34 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto 01</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../projeto00/style.css">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
 </head>
 <body>
     <div id="container" class="container-style">
-        <h1>Título</h1>
+        <h1>Projeto 03</h1>
         <hr>
         <div id="subtArea">
-            <p>Subtítulo</p>
-            <p>Mensagem</p>
+            <p>Calculadora de Aumento Salarial</p>
+            <p>Informe o salário do funcionário.</p>
         </div>
         <div id="input-container">
-            <input type="number" name="vel" id="vel" placeholder="val"><span>val</span>
+            <input type="number" name="val" id="valor" placeholder="Ex: 1.250*"><span>R$</span>
         </div>
-        <input class="button" type="button" value="Enviar">
+        <input class="button" type="button" value="Enviar" onclick="calcular()">
     </div>
     <div id="resulmodal" class="container-style">
         <button class="closebtn" onclick="closeModal()">x</button>
-        <span class="material-symbols-outlined">warning</span>
+        <span id="iconResul" class="material-symbols-outlined">warning</span>
         <p id="resul">Mensagem</p>
     </div>
 
-    <script>
-        function closeModal() {
-            var resulModal = window.document.querySelector('div#resulmodal')
-            resulModal.style.display = 'none'
-        }
-    </script>
+    <script src="main.js"></script>
 </body>
 </html>
