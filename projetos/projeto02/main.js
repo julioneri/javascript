@@ -21,22 +21,26 @@ function calcular() {
 
     // Verificando se os campos estão em branco
     if (reta1 != '' && reta2 != '' && reta3 != '') {
-        
+        var iconResul = window.document.querySelector('span#iconResul')
+
         // Verificando se os valores não podem formar um triângulo
         if (reta1 < reta2 + reta3 && reta2 < reta1 + reta3 && reta3 < reta1 + reta2) {
+            iconResul.innerHTML = 'done_outline'
 
             if (reta1 == reta2 && reta2 == reta3) {
-                resultado.innerHTML = 'Os valores que você inseriu podem formar um  Equilátero!'
+                resultado.innerHTML = 'Os valores que você inseriu podem formar um Equilátero!'
 
             } else if (reta1 != reta2 && reta2 != reta3 && reta3 != reta1) {
-                resultado.innerHTML = 'Os valores que você inseriu podem formar um  Escaleno!'
+                resultado.innerHTML = 'Os valores que você inseriu podem formar um Escaleno!'
             } else {
-                resultado.innerHTML = 'Os valores que você inseriu podem formar um  Isóceles!'
+                resultado.innerHTML = 'Os valores que você inseriu podem formar um Isóceles!'
             }
-    } else {
-        resultado.innerHTML = 'Os valores que você inseriu não podem formar um triângulo válido.'
-    }
 
+        } else {
+            iconResul.innerHTML = 'warning'
+            resultado.innerHTML = 'Os valores que você inseriu não podem formar um triângulo válido.'
+        }
+        
     } else {
         var iconResul = window.document.querySelector('span#iconResul')
         iconResul.innerHTML = 'chat_error'
