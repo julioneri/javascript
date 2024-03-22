@@ -31,7 +31,7 @@ function calcular() {
 
             iconResul.innerHTML = 'done_outline'
             resulmodal.style.display = 'flex'
-            resultado.innerHTML = 'Este veículo não excedeu os 80 km/h, portanto, não será multado!<br><br>Continue dirigindo com cuidado!'
+            resultado.innerHTML = 'Este veículo não excedeu os 80 km/h, portanto, não será multado!<br><br>Continue dirigindo com segurança!'
         } else {
             iconResul.innerHTML = 'chat_error'
             resulmodal.style.display = 'flex'
