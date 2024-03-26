@@ -1,60 +1,38 @@
 function contar() {
-    var startNum = window.document.querySelector('input#startNum')
-    var endNum = window.document.querySelector('input#endNum')
-    var stepNum = window.document.querySelector('input#stepNum')
+    let inicio = window.document.getElementById('startNum')    
+    let fim = window.document.getElementById('endNum')
+    let passo = window.document.getElementById('stepNum')
+
+    let resul = window.document.getElementById('resul')
     
-    var resultado = window.document.getElementById('resul')
-    var total = window.document.getElementById('total')
-    var cont = 0
+    if (inicio.value.length == 0 || fim.value.length == 0 || passo.value.length == 0) {
+        resul.innerHTML = 'Por favor, preencha todos os campos.'
 
-    var start = Number(startNum.value)
-    var end = Number(endNum.value)
-    var step = Number(stepNum.value)
-    
-
-    // Testando se PELO MENOS UM dos valores de início e fim foram obrigatóriamente preenchidos.
-    if (start != '' || end != '') {
-        // Testando se será uma contagem progressiva
-        if (start < end) {
-            // Verificando necessidade de correção do valor para passos.
-            if (step <= 0) {
-                alert('Passo inválido! Considerando passo como 1.')
-                step = 1
-                stepNum.value = 1
-            }
-
-            resultado.textContent = ''
-            for (s=start;s<=end;s+=step) {
-                resultado.textContent += `${s} > `
-                cont++
-            }
-            resultado.textContent += 'FIM!'
-            total.innerHTML = `Total de passos: ${cont}`
-
-        // Testando se será uma contagem regressiva
-        } else if (start > end) {
-            // Verificando necessidade de correção do valor para passos.
-            if (step >= 0) {
-                alert('Passo inválido! Considerando passo como -1.')
-                step = -1
-                stepNum.value = -1
-            }
-            resultado.textContent = ''
-            for (s=start;s>=end;s+=step) {
-                resultado.textContent += `${s} > `
-                cont++
-            }
-            resultado.textContent += 'FIM!'
-            total.innerHTML = `Total de passos: ${cont}`
-
-        // Caso os valores digitados sejam iguais
-        } else {
-            resultado.textContent = 'Você precisa digitar valores diferentes para fazer uma contagem.'
-            total.innerHTML = ''
-            
-        }
+    } else if (inicio.value == fim.value) {
+        resul.innerHTML = 'Por favor, digite valores diferentes.'
     } else {
-        resultado.textContent = 'Por favor, preencha todos os campos com valores válidos.'
-        total.innerHTML = ''
+        resul.innerHTML = 'Contando: <br>'
+        let i = Number(inicio.value)
+        let f = Number(fim.value)
+        let p = Number(passo.value)
+        if (p <= 0) {
+            // Valor de passo inválido
+            window.alert('Passo inválido! Considerando passo como 1.')
+            passo.value = 1
+            p = 1
+        }
+        if (i < f) {
+            // Contagem progressiva
+            for (let c = i; c <= f; c += p) {
+                resul.innerHTML += `${c} > `
+            }
+        } else if (i > f) {
+            // Contagem regressiva
+            for (let c = i; c >= f; c -= p) {
+                resul.innerHTML += `${c} > `
+            }
+        }
+        resul.innerHTML += 'FIM!'
+        
     }
 }
