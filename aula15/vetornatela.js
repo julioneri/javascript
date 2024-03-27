@@ -4,8 +4,8 @@ valores.sort()
 console.log(valores)
 
 /*
+// Percurso de exibição de vetores
 for (let pos= 0;pos<valores.length;pos++) {
-    // Percurso de exibição de vetores
     console.log(`A posição ${pos} tem o valor ${valores[pos]}`)
 }
 */
