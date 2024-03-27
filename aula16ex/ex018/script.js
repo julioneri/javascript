@@ -37,7 +37,7 @@ function somarValores() {
 
 function finalizar() {
     if (lista.length == 0) {
-        alert('Não é possível finalizar sem antes possuir valores atribuídos.')
+        alert('Adicione valores antes de finalizar!')
     } else {
         let resultado = window.document.getElementById('resultado')
 
