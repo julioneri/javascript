@@ -1,3 +1,5 @@
+// github.com/julioneri
+
 let listPessoas = []
 
 function newPessoa(nome, sobrenome, idade) {
@@ -21,3 +23,5 @@ newPessoa('Pedro', 'Pedreiro', 21)
 
 console.log(`O total de pessoas cadastradas é ${listPessoas.length}.`)
 exibirPessoas(listPessoas)
+
+// Feito por Júlio Néri
