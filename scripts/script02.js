@@ -1,3 +1,5 @@
+// github.com/julioneri
+
 let catalogoLivros = []
 
 // Função apra adicionar livros ao catálogo
@@ -40,3 +42,4 @@ newLivro('Acampamento Coelho', 'Alexandre', 'Aventura', 2020)
 
 listarLivros()
 // buscarLivro('DesprogramadO')
+// Feito por Júlio Néri
