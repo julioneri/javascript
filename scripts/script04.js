@@ -1,4 +1,22 @@
-// github.com/julioneri
+/*
+# Sistema de Carrinho de Compras
+
+Sistema de gestão de carrinho de compras em JavaScript.
+
+Cada item no carrinho tem as seguintes propriedades:
+1. Nome do produto
+2. Preço unitário
+3. Quantidade
+
+O programa é capaz de realizar as seguintes operações:
+1. Adicionar um novo item ao carrinho.
+2. Remover um item do carrinho.
+3. Atualizar a quantidade de um item no carrinho.
+4. Calcular o total do carrinho (preço total de todos os itens).
+
+// Feito por Júlio Néri
+// Siga-me => github.com/julioneri
+*/
 
 let carrinhoCompras = []
 
