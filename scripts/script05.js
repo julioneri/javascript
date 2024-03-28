@@ -8,7 +8,7 @@ Cada funcionário tem as seguintes propriedades:
 2. Cargo
 3. Salário
 
-O programa é ser capaz de realizar as seguintes operações:
+O programa é capaz de realizar as seguintes operações:
 1. Adicionar um novo funcionário ao sistema.
 2. Listar todos os funcionários cadastrados.
 3. Calcular o total da folha de pagamento (soma de todos os salários).
