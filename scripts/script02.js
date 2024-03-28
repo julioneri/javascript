@@ -1,4 +1,22 @@
-// github.com/julioneri
+/*
+# Sistema de Catálogo de Livros
+
+Programa em JavaScript que representa um catálogo de livros.
+
+Cada livro tem as seguintes propriedades:
+1. Título
+2. Autor
+3. Gênero
+4. Ano de publicação
+
+O programa é capaz de realizar as seguintes operações:
+1. Adicionar um novo livro ao catálogo.
+2. Listar todos os livros do catálogo.
+3. Buscar um livro pelo título.
+
+// Feito por Júlio Néri
+// Siga-me => github.com/julioneri
+*/
 
 let catalogoLivros = []
 
@@ -42,4 +60,3 @@ newLivro('Acampamento Coelho', 'Alexandre', 'Aventura', 2020)
 
 listarLivros()
 // buscarLivro('DesprogramadO')
-// Feito por Júlio Néri
