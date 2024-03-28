@@ -1,4 +1,22 @@
-// github.com/julioneri
+/*
+# Lista de Tarefas (To-Do List)
+
+Programa em JavaScript que representa uma lista de tarefas (To-Do List).
+
+Cada tarefa tem as seguintes propriedades:
+1. Descrição da tarefa
+2. Data de criação
+3. Estado da tarefa (concluída ou não)
+
+O programa é capaz de realizar as seguintes operações:
+1. Adicionar uma nova tarefa à lista.
+2. Listar todas as tarefas da lista.
+3. Marcar uma tarefa como concluída.
+4. Remover uma tarefa da lista.
+
+// Feito por Júlio Néri
+// Siga-me => github.com/julioneri
+*/
 
 let dataAtual = new Date()
 let dataHoje = dataAtual.getDate()
@@ -50,11 +68,10 @@ function removerTarefa(id) {
     }
 }
 
-novaTarefa('Arrumar a casa', dataHoje)
+novaTarefa('Arrumar a roupa', dataHoje)
 novaTarefa('Varrer a varanda', dataHoje)
 novaTarefa('Cozinhar a comida', dataHoje)
 concluirTarefa(0)
 exibirTarefas()
 removerTarefa(0)
 exibirTarefas()
-// Feito por Júlio Néri
