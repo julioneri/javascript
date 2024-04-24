@@ -43,7 +43,7 @@ function listarProdutos() {
 }
 
 
-// Buscando os produtos pelo nome
+// Buscando os produtos por nome
 function buscarProduto(nome) {
     console.log('== BUSCANDO PRODUTO... ==')
     for (let indiceProduto in listaProdutos) {
@@ -56,7 +56,7 @@ function buscarProduto(nome) {
 }
 
 
-// Atualizando quantidade de unidade para cada produto
+// Atualizando quantidade de unidades para cada produto
 function atualizarQuantidade(indiceProduto, newQuantidade) {
     console.log('== ATUALIZANDO QTDE... ==')
     if (newQuantidade >= 0 && indiceProduto < listaProdutos.length) {
@@ -72,7 +72,7 @@ function atualizarQuantidade(indiceProduto, newQuantidade) {
 }
 
 
-// Atualizando quantidade unitária de cada produto
+// Calculando o valor total de produtos em estoque
 function valorEstoque() {
     console.log('== CALCULANDO TOTAL... ==')
     let valorTotal = 0
