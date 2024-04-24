@@ -18,7 +18,7 @@ O programa é capaz de realizar as seguintes operações:
 // Feito por Júlio Néri
 // Siga-me => github.com/julioneri
 */
-// Lista de Produtos
+
 let listaProdutos = []
 
 
