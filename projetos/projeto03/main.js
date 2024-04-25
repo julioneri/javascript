@@ -26,7 +26,7 @@ function calcular() {
         if (valor > 1250) {
             var valorNovo = valor + (valor * 10) / 100
             resultado.innerHTML = `
-            O salário atual é superior R$1.250,00.<br><br>
+            O salário atual é superior a R$1.250,00.<br><br>
             
             O funcionário passará a ganhar R$${valorNovo.toFixed(2)}, um aumento de 10% do seu salário atual.`
         } else {
