@@ -31,7 +31,7 @@ let listaProjetos = []
 function criarProjeto(nome, descricao, dataInicio, dataConclusao) {
     console.log()
     console.log('[================== CRIANDO UM PROJETO =================]')
-    projeto = {
+    let projeto = {
         nome: nome,
         descricao: descricao,
         dataInicio: dataInicio,
