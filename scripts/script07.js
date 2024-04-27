@@ -24,7 +24,7 @@ O programa é capaz de realizar as seguintes operações:
 // Siga-me => github.com/julioneri
 */
 
-listaProjetos = []
+let listaProjetos = []
 
 
 // Cria um novo Projeto
